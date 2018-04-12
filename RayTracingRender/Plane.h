@@ -8,7 +8,7 @@ public:
 	Plane();
 	Plane(Vector3 normal, double d);
 	void initialize();
-	IntersectResult intersect(Ray ray);
+	IntersectResult intersect(Ray& ray);
 	virtual ~Plane();
 public:
 	Vector3 normal;

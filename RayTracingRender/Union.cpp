@@ -16,7 +16,7 @@ void Union::initialize() {
 	}
 }
 
-IntersectResult Union::intersect(Ray ray) {
+IntersectResult Union::intersect(Ray& ray) {
 	double minDistance = Infinity;
 	IntersectResult minResult = IntersectResult::noHit();
 	for (auto iterator = this->geometries.begin(); iterator != this->geometries.end(); iterator++) {

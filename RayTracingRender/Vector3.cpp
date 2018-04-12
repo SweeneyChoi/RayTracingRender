@@ -20,17 +20,17 @@ double Vector3::sqrLength() {
 
 Vector3 Vector3::normalize() {
 	double inv = 1.0 / length();
-	Vector3 v;
-	v.x = this->x*inv;
-	v.y = this->y*inv;
-	v.z = this->z*inv;
-	return v;
+	this->x = this->x*inv;
+	this->y = this->y*inv;
+	this->z = this->z*inv;
+	return *this;
 }
 
-void Vector3::negate() {
+Vector3 Vector3::negate() {
 	this->x = -this->x;
 	this->y = -this->y;
 	this->z = -this->z;
+	return *this;
 }
 
 Vector3 Vector3::zero() {

@@ -6,7 +6,7 @@ public:
 	double length();
 	double sqrLength();
 	Vector3 normalize();
-	void negate();
+	Vector3 negate();
 	static Vector3 zero();
 	virtual ~Vector3();
 	friend Vector3 operator+(const Vector3 &v1, const Vector3 &v2);

@@ -8,7 +8,7 @@ public:
 	PerspectiveCamera()=default;
 	PerspectiveCamera(Vector3 eye, Vector3 front, Vector3 up, double fov);
 	void initialize();
-	Ray generateRay(double x, double y);
+	void generateRay(double x, double y, Ray& ray);
 	virtual ~PerspectiveCamera();
 public:
 	Vector3 eye;

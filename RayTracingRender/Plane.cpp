@@ -15,7 +15,7 @@ void Plane::initialize() {
 	this->position = normal*this->d;	
 }
 
-IntersectResult Plane::intersect(Ray ray) {
+IntersectResult Plane::intersect(Ray& ray) {
 	double a = Dot(ray.direction, this->normal);
 	if (a >= 0) {
 		return IntersectResult::noHit();

@@ -16,10 +16,11 @@ void PerspectiveCamera::initialize() {
 	this->fovScale = tan(this->fov*0.5*PI / 180.0) * 2;
 }
 
-Ray PerspectiveCamera::generateRay(double x, double y) {
+void PerspectiveCamera::generateRay(double x, double y, Ray& ray) {
 	Vector3 r = this->right*((x - 0.5)*this->fovScale);
 	Vector3 u = this->up*((y - 0.5)*this->fovScale);
-	return Ray(this->eye, ((this->front + r) + u).normalize());
+	ray.origin = this->eye;
+	ray.direction = ((this->front + r) + u).normalize();
 }
 
 

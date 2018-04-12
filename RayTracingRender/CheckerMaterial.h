@@ -6,13 +6,16 @@ class CheckerMaterial :
 {
 public:
 	CheckerMaterial();
-	CheckerMaterial(double scale);
-	CheckerMaterial(double scale, double reflectiveness);
+	CheckerMaterial(double scale, double reflectiveness, double transparency = 0.0);
 	double getReflectiveness();
+	double getTransparency();
+	void setLightDir(Vector3 &lightDir);
+	void setLightColor(Color &lightColor);
 	Color sample(Ray ray, Vector3 position, Vector3 normal);
 	virtual ~CheckerMaterial();
 public:
 	double scale;
 	double reflectiveness;
+	double transparency;
 };
 

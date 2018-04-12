@@ -10,7 +10,7 @@ public:
 	Sphere()=default;
 	Sphere(Vector3 center, double radius);
 	void initialize();
-	IntersectResult intersect(Ray ray);
+	IntersectResult intersect(Ray& ray);
 	virtual ~Sphere();
 public:
 	Vector3 center;

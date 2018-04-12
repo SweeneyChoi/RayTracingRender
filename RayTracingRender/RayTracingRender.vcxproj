@@ -121,6 +121,7 @@
     <ClInclude Include="Color.h" />
     <ClInclude Include="Geometry.h" />
     <ClInclude Include="IntersectResult.h" />
+    <ClInclude Include="Light.h" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="PerspectiveCamera.h" />
     <ClInclude Include="PhongMaterial.h" />
@@ -135,6 +136,7 @@
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Geometry.cpp" />
     <ClCompile Include="IntersectResult.cpp" />
+    <ClCompile Include="Light.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="PerspectiveCamera.cpp" />

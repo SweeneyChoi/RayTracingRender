@@ -7,21 +7,28 @@ PhongMaterial::PhongMaterial()
 {
 }
 
-PhongMaterial::PhongMaterial(Color diffuse, Color specular, double shineness) {
-	this->diffuse = diffuse;
-	this->specular = specular;
-	this->shineness = shineness;
-}
-
-PhongMaterial::PhongMaterial(Color diffuse, Color specular, double shineness, double reflectiveness) {
+PhongMaterial::PhongMaterial(Color diffuse, Color specular, double shineness, double reflectiveness, double transparency) {
 	this->diffuse = diffuse;
 	this->specular = specular;
 	this->shineness = shineness;
 	this->reflectiveness = reflectiveness;
+	this->transparency = transparency;
 }
 
 double PhongMaterial::getReflectiveness() {
 	return this->reflectiveness;
+}
+
+double PhongMaterial::getTransparency() {
+	return this->transparency;
+}
+
+void PhongMaterial::setLightDir(Vector3 &lightDir) {
+	this->lightDir = lightDir;
+}
+
+void PhongMaterial::setLightColor(Color &lightColor) {
+	this->lightColor = lightColor;
 }
 
 Color PhongMaterial::sample(Ray ray, Vector3 position, Vector3 normal) {
